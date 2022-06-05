@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="Request_For_Blood" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tpd.Request_For_BloodController">
+   <children>
+      <ImageView fitHeight="560.0" fitWidth="1080.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/BloodBg1.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="352.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Group" />
+      <Text layoutX="230.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number :" />
+      <Text layoutX="523.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" wrappingWidth="49.494140625" />
+      <Text layoutX="54.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name :" />
+      <VBox alignment="CENTER" layoutY="-1.0" prefHeight="145.0" prefWidth="1080.0" style="-fx-background-color: #09689e;">
+         <children>
+            <Text fill="#f8f5f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Request For Blood" textAlignment="CENTER" wrappingWidth="444.43359375">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <TextField layoutX="15.0" layoutY="209.0" prefHeight="25.0" prefWidth="78.0" promptText="First Name" />
+      <TextField layoutX="101.0" layoutY="209.0" prefHeight="25.0" prefWidth="78.0" promptText="Last Name" />
+      <TextField layoutX="196.0" layoutY="209.0" prefHeight="25.0" prefWidth="117.0" promptText="Phone Number " />
+      <TextArea layoutX="718.0" layoutY="210.0" prefHeight="67.0" prefWidth="200.0" />
+      <Text layoutX="779.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text Field" wrappingWidth="77.80078125" />
+      <Button fx:id="Request" layoutX="942.0" layoutY="210.0" mnemonicParsing="false" onAction="#Request_action" prefHeight="48.0" prefWidth="117.0" text="Request">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button layoutX="54.0" layoutY="664.0" mnemonicParsing="false" onAction="#Back_action" style="-fx-background-color: #09689e;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="943.0" layoutY="659.0" mnemonicParsing="false" onAction="#Logout_Action" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #09689e;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="blood_group" layoutX="327.0" layoutY="209.0" prefHeight="25.0" prefWidth="117.0" promptText="Blood Group" />
+      <ComboBox fx:id="district" layoutX="456.0" layoutY="209.0" prefHeight="25.0" prefWidth="115.0" promptText="District" />
+      <ComboBox fx:id="upazila" layoutX="583.0" layoutY="209.0" prefHeight="25.0" prefWidth="115.0" promptText="Upazila" />
+   </children>
+</AnchorPane>
